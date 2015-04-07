@@ -18,3 +18,8 @@ def login(request):
         return HttpResponseRedirect("/")
     except Exception, err:
         print err
+
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/')
